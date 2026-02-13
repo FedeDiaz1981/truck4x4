@@ -67,17 +67,17 @@ export default function HomePage() {
     <div>
       <Header />
       <main className="pb-20">
-        <section className="relative min-h-[60svh] overflow-hidden pb-40 pt-32 lg:pb-48 lg:pt-44">
+        <section className="relative min-h-[18.6svh] overflow-hidden pb-40 pt-32 sm:min-h-[60svh] lg:pb-48 lg:pt-44">
           <Image
             src="/Hero.png"
             alt="Pickup hero"
             fill
             priority
-            className="object-cover object-[center_49%]"
+            className="object-cover object-[center_69%] scale-x-[1.3] sm:scale-x-100 sm:object-[center_49%]"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/10 via-white/0 to-white/30" />
 
-          <div className="absolute bottom-10 left-1/2 w-full max-w-4xl -translate-x-1/2 px-6">
+          <div className="absolute bottom-0 left-1/2 w-full max-w-4xl -translate-x-1/2 px-6 sm:bottom-10">
             <SearchBar value={query} onChange={setQuery} />
           </div>
         </section>

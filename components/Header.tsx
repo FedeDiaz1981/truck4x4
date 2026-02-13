@@ -29,7 +29,7 @@ export default function Header({ mode = "sticky" }: HeaderProps) {
 
   return (
     <header
-      className={`${isFixed ? "fixed left-0 right-0 top-0" : "sticky top-0"} z-40 h-[5.6rem] md:h-[7rem] transition-all duration-300 ${
+      className={`${isFixed ? "fixed left-0 right-0 top-0" : "sticky top-0"} z-40 h-[5.4rem] md:h-[7rem] transition-all duration-300 ${
         isFixed
           ? "border-b border-black/5 bg-white/90 backdrop-blur shadow-soft"
           : isScrolled
