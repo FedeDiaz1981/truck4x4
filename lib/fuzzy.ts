@@ -1,7 +1,7 @@
-﻿import type { Product } from "@/lib/types";
-import Fuse from "fuse.js";
+import type { Product } from "@/lib/types";
+import Fuse, { type IFuseOptions } from "fuse.js";
 
-const options: Fuse.IFuseOptions<Product> = {
+const options: IFuseOptions<Product> = {
   keys: ["title", "description", "brand", "compatibleBrands"],
   threshold: 0.35,
   ignoreLocation: true,
@@ -14,3 +14,4 @@ export function fuzzySearch(products: Product[], query: string) {
   const fuse = new Fuse(products, options);
   return fuse.search(clean).map((result) => result.item);
 }
+
