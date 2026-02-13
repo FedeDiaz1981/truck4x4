@@ -1,0 +1,125 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(1200px 600px at 80% -20%, rgba(9, 45, 105, 0.2), transparent 60%),
+    radial-gradient(900px 500px at -20% 10%, rgba(40, 64, 111, 0.18), transparent 60%),
+    linear-gradient(180deg, #f4f6fa 0%, #eef1f6 55%, #f6f8fb 100%);
+  color: #0b1d3a;
+  font-family: var(--font-sans), ui-sans-serif, system-ui;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input, button, textarea {
+  font: inherit;
+}
+
+main {
+  min-height: calc(100vh - 120px);
+}
+
+.searchbar-shell {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border-radius: 24px;
+  background: linear-gradient(145deg, #f6f7fb 0%, #b8bfca 30%, #e5e8ef 60%, #a9b1be 100%);
+  box-shadow:
+    inset 0 2px 4px rgba(255, 255, 255, 0.7),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.25),
+    0 24px 50px -28px rgba(11, 29, 58, 0.55);
+}
+
+.searchbar-shell::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 18px;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 16px 16px, #616a78 0 2.5px, #cfd4dd 2.5px 5px, transparent 5.5px),
+    radial-gradient(circle at calc(100% - 16px) 16px, #616a78 0 2.5px, #cfd4dd 2.5px 5px, transparent 5.5px),
+    radial-gradient(circle at 16px calc(100% - 16px), #616a78 0 2.5px, #cfd4dd 2.5px 5px, transparent 5.5px),
+    radial-gradient(circle at calc(100% - 16px) calc(100% - 16px), #616a78 0 2.5px, #cfd4dd 2.5px 5px, transparent 5.5px);
+}
+
+.searchbar-core {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, #0b1d3a 0%, #0f2f66 40%, #2a4475 70%, #0b1d3a 100%);
+  box-shadow:
+    inset 0 2px 6px rgba(255, 255, 255, 0.12),
+    inset 0 -4px 10px rgba(0, 0, 0, 0.35);
+}
+
+.searchbar-input {
+  flex: 1 1 240px;
+  min-width: 220px;
+  height: 52px;
+  padding: 0 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.12);
+  color: #f5f7fb;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.searchbar-input::placeholder {
+  color: rgba(236, 240, 247, 0.7);
+}
+
+.searchbar-input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.16);
+}
+
+.searchbar-button {
+  height: 52px;
+  padding: 0 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: linear-gradient(135deg, #1d355f 0%, #2a4878 50%, #1a2f55 100%);
+  color: #f5f7fb;
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.2),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.searchbar-button:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.25),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.4),
+    0 8px 18px -12px rgba(11, 29, 58, 0.5);
+}
+
+.searchbar-button:active {
+  transform: translateY(0);
+}
